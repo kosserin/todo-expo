@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
     marginTop: 24,
     paddingHorizontal: 20,
     paddingVertical: 24,
-    width: "100%",
+    alignSelf: 'stretch',
   },
   background: {
     position: "absolute",

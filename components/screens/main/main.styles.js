@@ -11,9 +11,9 @@ export const styles = StyleSheet.create({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "flex-start",
-    maxWidth: 'calc(100% - 40px)',
-    marginHorizontal: 'auto',
     marginTop: 48,
+    marginLeft: 20,
+    marginRight: 20
   },
   mainHeading: {
     fontSize: 40,
