@@ -1,5 +1,12 @@
 import React from "react";
-import { Text, ScrollView, View, SafeAreaView, Dimensions } from "react-native";
+import {
+  Text,
+  ScrollView,
+  View,
+  SafeAreaView,
+  Dimensions,
+  KeyboardAvoidingView,
+} from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 import { LinearGradient } from "expo-linear-gradient";
@@ -8,7 +15,7 @@ import { styles } from "./main.styles";
 import Todos from "../../todos/todos";
 
 const Main = () => {
-  const phoneWidth = Dimensions.get('window').width;
+  const phoneWidth = Dimensions.get("window").width;
 
   return (
     <LinearGradient
@@ -30,13 +37,18 @@ const Main = () => {
     >
       <SafeAreaView style={styles.container}>
         <StatusBar style="light" />
-        <ScrollView keyboardShouldPersistTaps="handled">
-          <View style={[styles.content, { width: phoneWidth - 40 }]}>
-            <Text style={styles.mainHeading}>Hello, glad to see you!</Text>
-            <Text style={styles.subtitle}>Write down your tasks</Text>
-            <Todos />
-          </View>
-        </ScrollView>
+        <KeyboardAvoidingView
+          behavior={Platform.OS === "ios" ? "padding" : "height"}
+        >
+          <ScrollView>
+            <View style={[styles.content, { width: phoneWidth - 40 }]}>
+              <Text style={styles.mainHeading}>Hello, glad to see you!</Text>
+              <Text style={styles.subtitle}>Write down your tasks</Text>
+              <Todos />
+              <Todos />
+            </View>
+          </ScrollView>
+        </KeyboardAvoidingView>
       </SafeAreaView>
     </LinearGradient>
   );

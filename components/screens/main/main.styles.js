@@ -13,7 +13,8 @@ export const styles = StyleSheet.create({
     alignItems: "flex-start",
     marginTop: 48,
     marginLeft: 20,
-    marginRight: 20
+    marginRight: 20,
+    marginBottom: 20
   },
   mainHeading: {
     fontSize: 40,
