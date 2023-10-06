@@ -6,6 +6,7 @@ import {
   SafeAreaView,
   Dimensions,
   KeyboardAvoidingView,
+  Platform,
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
