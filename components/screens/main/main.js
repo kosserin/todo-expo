@@ -46,7 +46,6 @@ const Main = () => {
               <Text style={styles.mainHeading}>Hello, glad to see you!</Text>
               <Text style={styles.subtitle}>Write down your tasks</Text>
               <Todos />
-              <Todos />
             </View>
           </ScrollView>
         </KeyboardAvoidingView>

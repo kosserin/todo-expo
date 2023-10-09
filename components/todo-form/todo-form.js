@@ -8,8 +8,11 @@ const TodoForm = ({ addTodo }) => {
   const [todoTitle, setTodoTitle] = useState("");
 
   const handleAdd = () => {
-    addTodo(todoTitle);
-    Keyboard.dismiss();
+    if (todoTitle) {
+      addTodo(todoTitle);
+      Keyboard.dismiss();
+      setTodoTitle("");
+    }
   };
 
   return (
